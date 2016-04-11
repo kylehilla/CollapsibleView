@@ -9,17 +9,38 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var gripView: UIView!
+    @IBOutlet weak var testView: UIView!
+    @IBOutlet weak var testViewHeight: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.gripView.layer.cornerRadius = 2.0
+        
+        let swipeUpGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleSwipeUpGestureRecognizer(_:)))
+        swipeUpGestureRecognizer.direction = UISwipeGestureRecognizerDirection.Up
+        testView.addGestureRecognizer(swipeUpGestureRecognizer)
+        
+        let swipeDownGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleSwipeDownGestureRecognizer(_:)))
+        swipeDownGestureRecognizer.direction = UISwipeGestureRecognizerDirection.Down
+        testView.addGestureRecognizer(swipeDownGestureRecognizer)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func handleSwipeUpGestureRecognizer(swipeGestureRecognizer: UISwipeGestureRecognizer) {
+        self.testViewHeight.constant = 10
+        UIView.animateWithDuration( 0.1, animations: {
+            self.testView.layoutIfNeeded()
+        })
     }
-
-
+    
+    func handleSwipeDownGestureRecognizer(swipeGestureRecognizer: UISwipeGestureRecognizer) {
+        self.testViewHeight.constant = 44
+        UIView.animateWithDuration( 0.1, animations: {
+            self.testView.layoutIfNeeded()
+        })
+    }
 }
 
