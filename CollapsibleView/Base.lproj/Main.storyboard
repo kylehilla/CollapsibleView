@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder Text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Otv-Z5-4i4">
-                                        <rect key="frame" x="8" y="9" width="584" height="22"/>
+                                        <rect key="frame" x="8" y="11" width="584" height="22"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="height" constant="44" identifier="testViewHeight" id="Q95-SI-kAS"/>
                                     <constraint firstItem="Otv-Z5-4i4" firstAttribute="leading" secondItem="9VA-Vt-eHB" secondAttribute="leading" constant="8" id="QMY-yf-bOW"/>
                                     <constraint firstItem="NJZ-K7-b3L" firstAttribute="centerX" secondItem="9VA-Vt-eHB" secondAttribute="centerX" id="UzF-uW-VvP"/>
-                                    <constraint firstItem="NJZ-K7-b3L" firstAttribute="top" secondItem="Otv-Z5-4i4" secondAttribute="bottom" constant="6" id="XMa-Hp-Exf"/>
+                                    <constraint firstItem="NJZ-K7-b3L" firstAttribute="top" secondItem="Otv-Z5-4i4" secondAttribute="bottom" constant="4" id="XMa-Hp-Exf"/>
                                     <constraint firstAttribute="bottom" secondItem="NJZ-K7-b3L" secondAttribute="bottom" constant="3" id="aCM-FX-Haf"/>
                                 </constraints>
                             </view>

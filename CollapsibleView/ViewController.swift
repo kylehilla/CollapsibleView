@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.gripView.layer.cornerRadius = 2.0
+        self.gripView.hidden = true
         
         let swipeUpGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.handleSwipeUpGestureRecognizer(_:)))
         swipeUpGestureRecognizer.direction = UISwipeGestureRecognizerDirection.Up
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
     
     func handleSwipeUpGestureRecognizer(swipeGestureRecognizer: UISwipeGestureRecognizer) {
         self.testViewHeight.constant = 10
+        self.gripView.hidden = false
         UIView.animateWithDuration( 0.1, animations: {
             self.testView.layoutIfNeeded()
         })
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
     
     func handleSwipeDownGestureRecognizer(swipeGestureRecognizer: UISwipeGestureRecognizer) {
         self.testViewHeight.constant = 44
+        self.gripView.hidden = true
         UIView.animateWithDuration( 0.1, animations: {
             self.testView.layoutIfNeeded()
         })
